@@ -47,7 +47,6 @@ func _process(delta):
 			var angle = deg_to_rad(randf_range(0, 360))
 			velocity = Vector2(cos(angle), sin(angle)) * lin_v
 			
-			#main.show_dialogue_window("beetle")
 			
 		captured_mouse_time += delta
 		if captured_mouse_time < 2:

@@ -34,6 +34,11 @@ var confetti_cooldown = 2
 @onready var images = [
 	preload("res://images/0.png"),
 	preload("res://images/1.png"),
+	preload("res://images/2.png"),
+	preload("res://images/3.png"),
+	preload("res://images/4.png"),
+	preload("res://images/5.png"),
+	preload("res://images/6.png"),
 ]
 
 func _ready():
@@ -174,7 +179,12 @@ func clicked_from(source: NodePath, show_bounce = false):
 			get_node(source).get_child(0).window.queue_free()
 		if "window" in get_node(source):
 			get_node(source).window.queue_free()
-		get_node(source).queue_free()
+		if "parent_node" in get_node(source):
+			get_node(get_node(source).parent_node).queue_free()
+		if get_node(source).get_parent().is_in_group("BounceChar"):
+			get_node(source).get_parent().queue_free()
+		else:
+			get_node(source).queue_free()
 		
 	if get_node(source).is_in_group("BounceChar"):
 		show_dialogue_window("moth")
@@ -184,7 +194,12 @@ func clicked_from(source: NodePath, show_bounce = false):
 			get_node(source).get_child(0).window.queue_free()
 		if "window" in get_node(source):
 			get_node(source).window.queue_free()
-		get_node(source).queue_free()
+		if "parent_node" in get_node(source):
+			get_node(get_node(source).parent_node).queue_free()
+		if get_node(source).get_parent().is_in_group("BounceChar"):
+			get_node(source).get_parent().queue_free()
+		else:
+			get_node(source).queue_free()
 	
 		
 	if name == "Circus":

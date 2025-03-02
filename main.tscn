@@ -17,11 +17,11 @@
 [ext_resource type="Script" path="res://mouse_char.gd" id="13_xabce"]
 [ext_resource type="Texture2D" uid="uid://dbkshijxv1f84" path="res://white.png" id="15_0t6pg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7khcf"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpgle"]
 resource_local_to_scene = true
 size = Vector2(338.831, 157.921)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjovn"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2csrr"]
 resource_local_to_scene = true
 size = Vector2(158.921, 111.194)
 
@@ -108,11 +108,11 @@ _data = {
 resource_local_to_scene = true
 size = Vector2(100, 111)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_msw6y"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e287p"]
 resource_local_to_scene = true
 size = Vector2(109, 123)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_altsg"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_le0mn"]
 resource_local_to_scene = true
 size = Vector2(88.0002, 125)
 
@@ -168,12 +168,12 @@ script = ExtResource("7_3ka0d")
 [node name="Window3" parent="Circus" instance=ExtResource("5_rcp68")]
 position = Vector2(53.3333, 360)
 scale = Vector2(6.67, 6.67)
-shape = SubResource("RectangleShape2D_7khcf")
+shape = SubResource("RectangleShape2D_fpgle")
 
 [node name="Window4" parent="Circus" instance=ExtResource("5_rcp68")]
 position = Vector2(3.33325, -489.167)
 scale = Vector2(6.67, 6.67)
-shape = SubResource("RectangleShape2D_xjovn")
+shape = SubResource("RectangleShape2D_2csrr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Circus"]
 libraries = {
@@ -217,7 +217,7 @@ image_window = ExtResource("10_bgnxd")
 [node name="Window" parent="ImageChar" instance=ExtResource("5_rcp68")]
 position = Vector2(-5, -5)
 scale = Vector2(9.99999, 9.99999)
-shape = SubResource("RectangleShape2D_msw6y")
+shape = SubResource("RectangleShape2D_e287p")
 
 [node name="MouseChar" type="Sprite2D" parent="."]
 position = Vector2(415, 326)
@@ -229,7 +229,7 @@ script = ExtResource("13_xabce")
 [node name="Window" parent="MouseChar" instance=ExtResource("5_rcp68")]
 position = Vector2(-260, 500)
 scale = Vector2(9.99999, 9.99999)
-shape = SubResource("RectangleShape2D_altsg")
+shape = SubResource("RectangleShape2D_le0mn")
 
 [node name="Character" parent="." instance=ExtResource("2_hgbp2")]
 visible = false

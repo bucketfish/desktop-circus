@@ -4,7 +4,7 @@ extends Window
 
 func _ready() -> void:
 
-	transient = true # Make the window considered as a child of the main window
+	#transient = true # Make the window considered as a child of the main window
 	#close_requested.connect(window_close_requested) # Actually close the window when clicking the close button
 	mouse_passthrough_polygon = $Polygon2D.polygon
 	
