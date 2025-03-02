@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://2lkkr3um4f7v"]
+
+[ext_resource type="Texture2D" uid="uid://chjhp33p4jeyk" path="res://moth_frames.png" id="1_blugg"]
+[ext_resource type="Script" path="res://bounce_char.gd" id="2_j6oq1"]
+[ext_resource type="PackedScene" uid="uid://ct2jvq8ds6qjc" path="res://window.tscn" id="3_1e8fm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2885"]
+resource_local_to_scene = true
+size = Vector2(100, 111)
+
+[node name="BounceChar" type="Sprite2D" groups=["BounceChar"]]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_blugg")
+hframes = 2
+vframes = 2
+script = ExtResource("2_j6oq1")
+
+[node name="Window" parent="." instance=ExtResource("3_1e8fm")]
+position = Vector2(20, -35)
+scale = Vector2(9.99999, 9.99999)
+shape = SubResource("RectangleShape2D_r2885")

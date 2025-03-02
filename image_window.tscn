@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://suq7ah446urq"]
+
+[ext_resource type="Script" path="res://image_window.gd" id="1_kuwwd"]
+[ext_resource type="Texture2D" uid="uid://cg0gcwelyo8qc" path="res://images/0.png" id="2_1nkwf"]
+
+[node name="ImageWindow" type="Window"]
+position = Vector2i(0, 36)
+size = Vector2i(400, 400)
+script = ExtResource("1_kuwwd")
+
+[node name="Image" type="Sprite2D" parent="."]
+texture = ExtResource("2_1nkwf")
+centered = false
+
+[node name="ViewCamera" type="Camera2D" parent="."]

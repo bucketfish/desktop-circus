@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqut0tgakf53e"]
+
+[ext_resource type="Texture2D" uid="uid://dbkshijxv1f84" path="res://white.png" id="1_l2sem"]
+[ext_resource type="Script" path="res://confetti_window.gd" id="1_yb0t5"]
+
+[sub_resource type="Gradient" id="Gradient_hs4bp"]
+interpolation_mode = 1
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.185751, 0.368957, 0.549618, 0.699746, 0.870229)
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.649, 0.19, 1, 1, 1, 0, 1, 0, 1, 0.116667, 1, 0, 0.35, 1, 1, 0.45, 0, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0kkxg"]
+gradient = SubResource("Gradient_hs4bp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qqija"]
+particle_flag_rotate_y = true
+angle_min = -71.9
+angle_max = 612.2
+direction = Vector3(1, -1, 0)
+flatness = 0.369
+initial_velocity_min = 679.46
+initial_velocity_max = 890.59
+angular_velocity_min = 309.56
+angular_velocity_max = 486.45
+gravity = Vector3(0, 198, 0)
+radial_accel_min = 54.89
+radial_accel_max = 74.47
+scale_min = 0.2
+scale_max = 0.2
+color_initial_ramp = SubResource("GradientTexture1D_0kkxg")
+
+[node name="ConfettiWindow" type="Window"]
+transparent_bg = true
+size = Vector2i(3024, 1964)
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+unfocusable = true
+mouse_passthrough = true
+script = ExtResource("1_yb0t5")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(69, 1800)
+scale = Vector2(2, 2)
+emitting = false
+amount = 32
+process_material = SubResource("ParticleProcessMaterial_qqija")
+texture = ExtResource("1_l2sem")
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.77
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-1732, 1343, -1180, 1326, -1180, 1742, -1632, 1742)
